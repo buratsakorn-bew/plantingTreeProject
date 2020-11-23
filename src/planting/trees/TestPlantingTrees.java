@@ -29,11 +29,15 @@ public class TestPlantingTrees {
             int selectedMenu = sc.nextInt();
             switch (selectedMenu){
                 case 1 :
-                    System.out.println("------ All Plants ------");
-                    System.out.println(treeslot);
-                    System.out.println("------------------------");
-                    break;
+		    System.out.println();
+                    System.out.println("-------- All Plants --------");
+                    System.out.print(treeslot);
+                    System.out.println("----------------------------");
+		    System.out.println();
+                    
+ 		break;
                 case 2 :
+                    System.out.println();
                     System.out.println("------ Watering Plant ------");
                     System.out.print("Choose number of Slot 0-"+(treeslot.getNumberOfSlot()-1)+" : #" );
                    
@@ -44,29 +48,38 @@ public class TestPlantingTrees {
                         slotnumber = sc.nextInt();
                     }
                         treeslot.watering(slotnumber);
-                        System.out.println("------ Success ------");
-                        System.out.println(treeslot);
-                        System.out.println("------------------------");
-                    
+			System.out.println();
+			System.out.println("L O A D I N G . . .");
+			System.out.println();
+                        System.out.println("--------- Success ----------");
+                        System.out.print(treeslot);
+                        System.out.println("----------------------------");
+			System.out.println();
+  			                   
                     break;
                 case 3 :
                     flag = 1;
-                    break;
+		    System.out.println("---------THANK YOU----------");
+                    
+		    break;
                 default:
-                    flag = 1;
+                    flag = 0;
+                    System.out.println();
+		    System.out.println("--------- TRY AGAIN --------");
+                    System.out.println(" Please select menu 1-3 ");
                     break;
             }
         }
 
-
     }
     
     public static void getMenu(){
-        System.out.println("***** menu *****");
+        System.out.println("MENU -----------------------");
         System.out.println("1: Get All Status of Plant");
         System.out.println("2: Water the plants");
         System.out.println("3: Exit Program");
-        System.out.println("**********");
+        System.out.println("----------------------------");
         System.out.print("Select : ");
+	
     }
-}
+} 
